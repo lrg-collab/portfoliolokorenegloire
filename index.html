@@ -3,14 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOKO René Gloire — Portfolio SISR</title>
+    <title>LOKO René Gloire — Portfolio BTS SIO SISR</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        *, *::before, *::after {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
             --cream: #F8F5F0;
@@ -30,9 +26,7 @@
             --muted-light: #F2F2F2;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
+        html { scroll-behavior: smooth; }
 
         body {
             font-family: 'Source Sans 3', sans-serif;
@@ -42,1450 +36,1068 @@
             font-size: 16px;
         }
 
-        /* ─── NAVIGATION ─── */
+        /* ─── NAV ─── */
         nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
+            position: fixed; top: 0; width: 100%;
             background: var(--white);
             border-bottom: 1px solid var(--border);
             z-index: 100;
-            padding: 0;
         }
-
         .nav-inner {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 2rem;
-            height: 64px;
+            max-width: 1100px; margin: 0 auto;
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 0 2rem; height: 64px;
         }
-
         .nav-logo {
             font-family: 'Playfair Display', serif;
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: var(--dark);
-            letter-spacing: 0.02em;
-            text-decoration: none;
+            font-size: 1.1rem; font-weight: 700;
+            color: var(--dark); text-decoration: none;
         }
-
-        .nav-logo span {
-            color: var(--accent);
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 0;
-        }
-
+        .nav-logo span { color: var(--accent); }
+        .nav-links { display: flex; list-style: none; }
         .nav-links a {
-            display: block;
-            padding: 0.4rem 0.9rem;
-            font-size: 0.88rem;
-            font-weight: 500;
-            color: var(--mid);
-            text-decoration: none;
-            letter-spacing: 0.03em;
-            text-transform: uppercase;
+            display: block; padding: 0.4rem 0.75rem;
+            font-size: 0.82rem; font-weight: 500;
+            color: var(--mid); text-decoration: none;
+            letter-spacing: 0.03em; text-transform: uppercase;
             transition: color 0.2s;
         }
-
-        .nav-links a:hover,
-        .nav-links a.active {
-            color: var(--accent);
-        }
-
+        .nav-links a:hover, .nav-links a.active { color: var(--accent); }
         .hamburger {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            cursor: pointer;
-            background: none;
-            border: none;
-            padding: 4px;
+            display: none; flex-direction: column; gap: 5px;
+            cursor: pointer; background: none; border: none; padding: 4px;
         }
-
-        .hamburger span {
-            display: block;
-            width: 22px;
-            height: 2px;
-            background: var(--charcoal);
-            transition: all 0.3s;
-        }
+        .hamburger span { display: block; width: 22px; height: 2px; background: var(--charcoal); }
 
         /* ─── LAYOUT ─── */
-        .page-section {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 6rem 2rem 5rem;
-        }
-
-        .section-header {
-            margin-bottom: 3rem;
-        }
-
+        .page-section { max-width: 1100px; margin: 0 auto; padding: 5.5rem 2rem 4.5rem; }
+        .section-header { margin-bottom: 2.5rem; }
         .section-label {
-            font-size: 0.78rem;
-            font-weight: 600;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: var(--accent);
-            margin-bottom: 0.5rem;
+            font-size: 0.75rem; font-weight: 600;
+            letter-spacing: 0.12em; text-transform: uppercase;
+            color: var(--accent); margin-bottom: 0.4rem;
         }
-
         .section-title {
             font-family: 'Playfair Display', serif;
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: var(--dark);
-            line-height: 1.2;
+            font-size: 2rem; font-weight: 700;
+            color: var(--dark); line-height: 1.2;
         }
-
-        .divider {
-            width: 48px;
-            height: 3px;
-            background: var(--accent);
-            margin-top: 1rem;
-        }
+        .divider { width: 44px; height: 3px; background: var(--accent); margin-top: 0.9rem; }
 
         /* ─── HERO ─── */
-        #accueil {
-            padding-top: 64px;
-            background: var(--white);
-            border-bottom: 1px solid var(--border);
-        }
-
+        #accueil { padding-top: 64px; background: var(--white); border-bottom: 1px solid var(--border); }
         .hero-inner {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 5rem 2rem 4.5rem;
-            display: grid;
-            grid-template-columns: 1fr auto;
-            align-items: center;
-            gap: 4rem;
+            max-width: 1100px; margin: 0 auto;
+            padding: 4.5rem 2rem 4rem;
+            display: grid; grid-template-columns: 1fr auto;
+            align-items: center; gap: 4rem;
         }
-
         .hero-label {
-            font-size: 0.78rem;
-            font-weight: 600;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            color: var(--accent);
-            margin-bottom: 1rem;
+            font-size: 0.75rem; font-weight: 600;
+            letter-spacing: 0.14em; text-transform: uppercase;
+            color: var(--accent); margin-bottom: 0.9rem;
         }
-
         .hero-name {
             font-family: 'Playfair Display', serif;
-            font-size: 3.6rem;
-            font-weight: 700;
-            color: var(--dark);
-            line-height: 1.1;
-            margin-bottom: 0.8rem;
+            font-size: 3.2rem; font-weight: 700;
+            color: var(--dark); line-height: 1.1; margin-bottom: 0.5rem;
         }
-
-        .hero-role {
-            font-size: 1.15rem;
-            font-weight: 500;
-            color: var(--mid);
-            margin-bottom: 1.5rem;
-        }
-
-        .hero-desc {
-            font-size: 1rem;
-            color: var(--muted);
-            max-width: 520px;
-            margin-bottom: 2.5rem;
-            line-height: 1.8;
-        }
-
-        .hero-actions {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 0.75rem 1.8rem;
-            font-family: 'Source Sans 3', sans-serif;
-            font-size: 0.9rem;
-            font-weight: 600;
-            letter-spacing: 0.04em;
-            text-decoration: none;
-            cursor: pointer;
-            border: none;
-            transition: all 0.2s;
-        }
-
-        .btn-primary {
-            background: var(--accent);
-            color: var(--white);
-        }
-
-        .btn-primary:hover {
-            background: #1e3d7a;
-        }
-
-        .btn-outline {
-            background: transparent;
-            color: var(--accent);
-            border: 1.5px solid var(--accent);
-        }
-
-        .btn-outline:hover {
-            background: var(--accent-light);
-        }
-
+        .hero-role { font-size: 1.1rem; font-weight: 500; color: var(--mid); margin-bottom: 1.2rem; }
+        .hero-desc { font-size: 0.97rem; color: var(--muted); max-width: 520px; margin-bottom: 2rem; line-height: 1.8; }
+        .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
         .hero-avatar {
-            width: 220px;
-            height: 220px;
-            border-radius: 50%;
-            background: var(--accent-light);
-            border: 4px solid var(--border);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 5rem;
-            flex-shrink: 0;
+            width: 200px; height: 200px; border-radius: 50%;
+            background: var(--accent-light); border: 4px solid var(--border);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 4.5rem; flex-shrink: 0;
         }
 
-        /* ─── À PROPOS ─── */
-        .about-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-            margin-top: 2rem;
+        /* ─── BOUTONS ─── */
+        .btn {
+            display: inline-flex; align-items: center; gap: 0.4rem;
+            padding: 0.7rem 1.6rem;
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 0.88rem; font-weight: 600;
+            letter-spacing: 0.03em; text-decoration: none;
+            cursor: pointer; border: none; transition: all 0.2s;
         }
-
-        .about-card {
-            background: var(--white);
-            border: 1px solid var(--border);
-            padding: 1.8rem;
+        .btn-primary { background: var(--accent); color: var(--white); }
+        .btn-primary:hover { background: #1e3d7a; }
+        .btn-outline { background: transparent; color: var(--accent); border: 1.5px solid var(--accent); }
+        .btn-outline:hover { background: var(--accent-light); }
+        .btn-download {
+            background: var(--success-light); color: var(--success);
+            border: 1.5px solid #a8d5bb; font-size: 0.85rem; padding: 0.55rem 1.2rem;
         }
+        .btn-download:hover { background: #d4eddf; }
+        .btn-sm { padding: 0.5rem 1.1rem; font-size: 0.82rem; }
 
-        .about-card-icon {
-            font-size: 1.6rem;
-            margin-bottom: 1rem;
-        }
-
-        .about-card h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.05rem;
-            font-weight: 700;
-            color: var(--dark);
-            margin-bottom: 0.6rem;
-        }
-
-        .about-card p {
-            font-size: 0.92rem;
-            color: var(--muted);
-            line-height: 1.7;
-        }
-
-        /* ─── COMPÉTENCES ─── */
-        #competences {
-            background: var(--white);
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-        }
-
-        .skill-card {
-            border: 1px solid var(--border);
-            padding: 1.8rem;
-            background: var(--cream);
-        }
-
-        .skill-top {
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-            margin-bottom: 1.2rem;
-        }
-
-        .skill-icon {
-            font-size: 1.4rem;
-        }
-
-        .skill-name {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.05rem;
-            font-weight: 700;
-            color: var(--dark);
-        }
-
-        .skill-bar-wrap {
-            margin-bottom: 1.2rem;
-        }
-
-        .skill-bar-label {
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.82rem;
-            color: var(--muted);
-            margin-bottom: 0.4rem;
-        }
-
-        .skill-bar {
-            height: 6px;
-            background: var(--border);
-        }
-
-        .skill-bar-fill {
-            height: 100%;
-            background: var(--accent);
-            width: 0;
-            transition: width 1.2s ease;
-        }
-
-        .tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.4rem;
-        }
-
+        /* ─── TAGS ─── */
+        .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
         .tag {
-            font-size: 0.8rem;
-            font-weight: 500;
-            padding: 0.25rem 0.65rem;
-            background: var(--accent-light);
-            color: var(--accent);
+            font-size: 0.78rem; font-weight: 500;
+            padding: 0.22rem 0.6rem;
+            background: var(--accent-light); color: var(--accent);
             border: 1px solid #c8d8f5;
         }
 
+        /* ─── À PROPOS ─── */
+        .about-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.4rem; margin-top: 2rem; }
+        .about-card { background: var(--white); border: 1px solid var(--border); padding: 1.6rem; }
+        .about-card-icon { font-size: 1.5rem; margin-bottom: 0.8rem; }
+        .about-card h3 { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: var(--dark); margin-bottom: 0.5rem; }
+        .about-card p { font-size: 0.9rem; color: var(--muted); line-height: 1.7; }
+
+        /* ─── COMPÉTENCES ─── */
+        #competences { background: var(--white); }
+        .skills-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1.4rem; }
+        .skill-card { border: 1px solid var(--border); padding: 1.6rem; background: var(--cream); }
+        .skill-top { display: flex; align-items: center; gap: 0.7rem; margin-bottom: 1.1rem; }
+        .skill-icon { font-size: 1.3rem; }
+        .skill-name { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: var(--dark); }
+        .skill-bar-wrap { margin-bottom: 1.1rem; }
+        .skill-bar-label { display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--muted); margin-bottom: 0.4rem; }
+        .skill-bar { height: 5px; background: var(--border); }
+        .skill-bar-fill { height: 100%; background: var(--accent); width: 0; transition: width 1.2s ease; }
+
+        /* ─── TABLEAU COMPÉTENCES BTS ─── */
+        #bts-competences { background: var(--cream); }
+        .table-wrapper { overflow-x: auto; margin-top: 1rem; }
+        table { width: 100%; border-collapse: collapse; background: var(--white); font-size: 0.88rem; }
+        thead tr { background: var(--accent); color: var(--white); }
+        th { padding: 0.8rem 1rem; text-align: left; font-weight: 600; font-size: 0.82rem; letter-spacing: 0.04em; text-transform: uppercase; }
+        td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); vertical-align: top; color: var(--charcoal); }
+        tr:last-child td { border-bottom: none; }
+        tr:nth-child(even) td { background: #fafaf8; }
+        .niveau-badge {
+            display: inline-block; padding: 0.15rem 0.55rem;
+            font-size: 0.75rem; font-weight: 600; border-radius: 2px;
+        }
+        .niveau-avance { background: var(--success-light); color: var(--success); }
+        .niveau-intermediaire { background: var(--warning-light); color: var(--warning); }
+        .niveau-debutant { background: var(--muted-light); color: var(--muted); }
+
         /* ─── CERTIFICATIONS ─── */
-        .cert-filters {
-            display: flex;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-            margin-bottom: 2.5rem;
-        }
-
+        .cert-filters { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2rem; }
         .filter-btn {
-            padding: 0.5rem 1.2rem;
-            font-family: 'Source Sans 3', sans-serif;
-            font-size: 0.85rem;
-            font-weight: 500;
-            letter-spacing: 0.04em;
-            background: var(--white);
-            border: 1px solid var(--border);
-            color: var(--mid);
-            cursor: pointer;
-            transition: all 0.2s;
+            padding: 0.45rem 1.1rem; font-family: 'Source Sans 3', sans-serif;
+            font-size: 0.83rem; font-weight: 500; letter-spacing: 0.03em;
+            background: var(--white); border: 1px solid var(--border);
+            color: var(--mid); cursor: pointer; transition: all 0.2s;
         }
-
-        .filter-btn:hover {
-            border-color: var(--accent);
-            color: var(--accent);
-        }
-
-        .filter-btn.active {
-            background: var(--accent);
-            border-color: var(--accent);
-            color: var(--white);
-        }
-
-        .certs-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-        }
-
+        .filter-btn:hover { border-color: var(--accent); color: var(--accent); }
+        .filter-btn.active { background: var(--accent); border-color: var(--accent); color: var(--white); }
+        .certs-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.4rem; }
         .cert-card {
-            background: var(--white);
-            border: 1px solid var(--border);
-            padding: 1.6rem;
-            display: flex;
-            flex-direction: column;
-            gap: 0.9rem;
-            transition: box-shadow 0.2s;
+            background: var(--white); border: 1px solid var(--border);
+            padding: 1.5rem; display: flex; flex-direction: column;
+            gap: 0.8rem; transition: box-shadow 0.2s;
         }
+        .cert-card:hover { box-shadow: 0 4px 18px rgba(0,0,0,0.07); }
+        .cert-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 0.8rem; }
+        .cert-icon { font-size: 1.8rem; line-height: 1; }
+        .cert-status-badge { font-size: 0.72rem; font-weight: 600; padding: 0.18rem 0.55rem; letter-spacing: 0.03em; white-space: nowrap; }
+        .status-obtenue { background: var(--success-light); color: var(--success); }
+        .status-en_cours { background: var(--warning-light); color: var(--warning); }
+        .status-prevue { background: var(--muted-light); color: var(--muted); }
+        .cert-name { font-family: 'Playfair Display', serif; font-size: 0.97rem; font-weight: 700; color: var(--dark); line-height: 1.3; }
+        .cert-org { font-size: 0.83rem; color: var(--muted); }
+        .cert-date { font-size: 0.8rem; color: var(--light); }
+        .cert-progress-wrap { margin-top: 0.2rem; }
+        .cert-progress-labels { display: flex; justify-content: space-between; font-size: 0.78rem; color: var(--muted); margin-bottom: 0.3rem; }
+        .cert-progress-bar { height: 5px; background: var(--border); }
+        .cert-progress-fill { height: 100%; background: var(--warning); width: 0; transition: width 1.2s ease; }
+        .cert-details-toggle { font-size: 0.8rem; color: var(--accent); cursor: pointer; background: none; border: none; padding: 0; font-family: 'Source Sans 3', sans-serif; font-weight: 500; }
+        .cert-details-panel { display: none; border-top: 1px solid var(--border); padding-top: 0.7rem; margin-top: 0.1rem; }
+        .cert-details-panel.open { display: block; }
+        .cert-detail-row { display: flex; justify-content: space-between; font-size: 0.81rem; padding: 0.28rem 0; border-bottom: 1px solid var(--border); }
+        .cert-detail-row:last-of-type { border-bottom: none; }
+        .cert-detail-key { color: var(--mid); font-weight: 600; }
+        .cert-detail-val { color: var(--charcoal); }
 
-        .cert-card:hover {
-            box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+        /* ─── E4 / E5 ─── */
+        #epreuves { background: var(--white); }
+        .epreuves-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1.5rem; }
+        .epreuve-card { border: 1px solid var(--border); background: var(--cream); padding: 1.8rem; }
+        .epreuve-badge {
+            display: inline-block; margin-bottom: 1rem;
+            font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em;
+            text-transform: uppercase; padding: 0.2rem 0.7rem;
+            background: var(--accent); color: var(--white);
         }
+        .epreuve-title { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--dark); margin-bottom: 0.5rem; line-height: 1.3; }
+        .epreuve-subtitle { font-size: 0.88rem; color: var(--accent); font-weight: 600; margin-bottom: 1.2rem; }
+        .mission-list { list-style: none; margin-bottom: 1.4rem; }
+        .mission-list li {
+            font-size: 0.88rem; color: var(--muted); padding: 0.4rem 0;
+            border-bottom: 1px solid var(--border); padding-left: 1rem; position: relative; line-height: 1.6;
+        }
+        .mission-list li::before { content: "–"; position: absolute; left: 0; color: var(--accent); }
+        .mission-list li:last-child { border-bottom: none; }
+        .epreuve-download { margin-top: 1rem; }
 
-        .cert-top {
-            display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
-            gap: 1rem;
-        }
-
-        .cert-icon {
-            font-size: 2rem;
-            line-height: 1;
-        }
-
-        .cert-status-badge {
-            font-size: 0.75rem;
-            font-weight: 600;
-            padding: 0.2rem 0.6rem;
-            letter-spacing: 0.04em;
-            white-space: nowrap;
-        }
-
-        .status-obtenue {
-            background: var(--success-light);
-            color: var(--success);
-        }
-
-        .status-en_cours {
-            background: var(--warning-light);
-            color: var(--warning);
-        }
-
-        .status-prevue {
-            background: var(--muted-light);
-            color: var(--muted);
-        }
-
-        .cert-name {
-            font-family: 'Playfair Display', serif;
-            font-size: 1rem;
-            font-weight: 700;
-            color: var(--dark);
-            line-height: 1.3;
-        }
-
-        .cert-org {
-            font-size: 0.85rem;
-            color: var(--muted);
-        }
-
-        .cert-date {
-            font-size: 0.82rem;
-            color: var(--light);
-        }
-
-        .cert-progress-wrap {
-            margin-top: 0.2rem;
-        }
-
-        .cert-progress-labels {
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.8rem;
-            color: var(--muted);
-            margin-bottom: 0.3rem;
-        }
-
-        .cert-progress-bar {
-            height: 5px;
-            background: var(--border);
-        }
-
-        .cert-progress-fill {
-            height: 100%;
-            background: var(--warning);
-            width: 0;
-            transition: width 1.2s ease;
-        }
-
-        .cert-details-toggle {
-            font-size: 0.82rem;
-            color: var(--accent);
-            cursor: pointer;
-            background: none;
-            border: none;
-            padding: 0;
-            font-family: 'Source Sans 3', sans-serif;
-            font-weight: 500;
-            text-align: left;
-        }
-
-        .cert-details-panel {
-            display: none;
-            border-top: 1px solid var(--border);
-            padding-top: 0.8rem;
-            margin-top: 0.2rem;
-        }
-
-        .cert-details-panel.open {
-            display: block;
-        }
-
-        .cert-detail-row {
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.83rem;
-            padding: 0.3rem 0;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .cert-detail-row:last-child {
-            border-bottom: none;
-        }
-
-        .cert-detail-key {
-            color: var(--mid);
-            font-weight: 600;
-        }
-
-        .cert-detail-val {
-            color: var(--charcoal);
-        }
-
-        .cert-link {
-            display: inline-block;
-            margin-top: 0.6rem;
-            font-size: 0.83rem;
-            font-weight: 600;
-            color: var(--accent);
-            text-decoration: none;
-        }
-
-        .cert-link:hover {
-            text-decoration: underline;
-        }
+        /* ─── STAGES ─── */
+        #stages { background: var(--cream); }
+        .stages-list { display: flex; flex-direction: column; gap: 1.5rem; }
+        .stage-card { background: var(--white); border: 1px solid var(--border); padding: 1.8rem; }
+        .stage-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap; }
+        .stage-meta { font-size: 0.8rem; color: var(--light); margin-bottom: 0.3rem; }
+        .stage-title { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--dark); }
+        .stage-lieu { font-size: 0.88rem; color: var(--mid); margin-top: 0.2rem; }
+        .stage-section-title { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin: 1rem 0 0.5rem; }
+        .stage-missions { list-style: none; }
+        .stage-missions li { font-size: 0.88rem; color: var(--muted); padding: 0.35rem 0; border-bottom: 1px solid var(--border); padding-left: 1rem; position: relative; line-height: 1.6; }
+        .stage-missions li::before { content: "–"; position: absolute; left: 0; color: var(--accent); }
+        .stage-missions li:last-child { border-bottom: none; }
 
         /* ─── PROJETS ─── */
-        #projets {
-            background: var(--white);
+        #projets { background: var(--white); }
+        .projects-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1.4rem; }
+        .project-card { border: 1px solid var(--border); background: var(--cream); padding: 1.8rem; transition: box-shadow 0.2s; }
+        .project-card:hover { box-shadow: 0 4px 18px rgba(0,0,0,0.06); }
+        .project-badge {
+            display: inline-block; margin-bottom: 0.8rem;
+            font-size: 0.7rem; font-weight: 700; letter-spacing: 0.07em;
+            text-transform: uppercase; padding: 0.18rem 0.6rem;
+            background: var(--accent-light); color: var(--accent);
+            border: 1px solid #c8d8f5;
         }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-        }
-
-        .project-card {
-            border: 1px solid var(--border);
-            background: var(--cream);
-            padding: 1.8rem;
-            transition: box-shadow 0.2s;
-        }
-
-        .project-card:hover {
-            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-        }
-
-        .project-icon {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .project-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--dark);
-            margin-bottom: 0.6rem;
-        }
-
-        .project-desc {
-            font-size: 0.92rem;
-            color: var(--muted);
-            line-height: 1.7;
-            margin-bottom: 1.2rem;
-        }
+        .project-icon { font-size: 1.8rem; margin-bottom: 0.8rem; }
+        .project-title { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; color: var(--dark); margin-bottom: 0.5rem; }
+        .project-desc { font-size: 0.9rem; color: var(--muted); line-height: 1.7; margin-bottom: 1.1rem; }
+        .project-actions { display: flex; gap: 0.6rem; flex-wrap: wrap; }
 
         /* ─── VEILLE ─── */
-        .veille-layout {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 2.5rem;
-        }
-
-        .articles-list {
-            display: flex;
-            flex-direction: column;
-            gap: 1.2rem;
-        }
-
-        .article-card {
-            background: var(--white);
-            border: 1px solid var(--border);
-            padding: 1.4rem 1.6rem;
-            transition: box-shadow 0.2s;
-        }
-
-        .article-card:hover {
-            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
-        }
-
-        .article-meta {
-            font-size: 0.8rem;
-            color: var(--light);
-            margin-bottom: 0.4rem;
-            letter-spacing: 0.02em;
-        }
-
-        .article-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 1rem;
-            font-weight: 700;
-            color: var(--dark);
-            margin-bottom: 0.5rem;
-        }
-
-        .article-excerpt {
-            font-size: 0.9rem;
-            color: var(--muted);
-            line-height: 1.6;
-        }
-
-        .veille-sidebar {
-            background: var(--white);
-            border: 1px solid var(--border);
-            padding: 1.6rem;
-            align-self: start;
-        }
-
-        .sidebar-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 1rem;
-            font-weight: 700;
-            color: var(--dark);
-            margin-bottom: 1.2rem;
-            padding-bottom: 0.8rem;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .tool-item {
-            padding: 0.9rem 0;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .tool-item:last-child {
-            border-bottom: none;
-            padding-bottom: 0;
-        }
-
-        .tool-name {
-            font-size: 0.92rem;
-            font-weight: 600;
-            color: var(--charcoal);
-            margin-bottom: 0.2rem;
-        }
-
-        .tool-desc {
-            font-size: 0.83rem;
-            color: var(--muted);
-        }
+        #veille { background: var(--cream); }
+        .veille-layout { display: grid; grid-template-columns: 2fr 1fr; gap: 2.5rem; }
+        .articles-list { display: flex; flex-direction: column; gap: 1.1rem; }
+        .article-card { background: var(--white); border: 1px solid var(--border); padding: 1.3rem 1.5rem; transition: box-shadow 0.2s; }
+        .article-card:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.06); }
+        .article-meta { font-size: 0.78rem; color: var(--light); margin-bottom: 0.3rem; }
+        .article-title { font-family: 'Playfair Display', serif; font-size: 0.97rem; font-weight: 700; color: var(--dark); margin-bottom: 0.4rem; }
+        .article-excerpt { font-size: 0.88rem; color: var(--muted); line-height: 1.6; }
+        .article-impact { font-size: 0.83rem; color: var(--accent); margin-top: 0.5rem; font-style: italic; }
+        .veille-sidebar { background: var(--white); border: 1px solid var(--border); padding: 1.5rem; align-self: start; }
+        .sidebar-title { font-family: 'Playfair Display', serif; font-size: 0.97rem; font-weight: 700; color: var(--dark); margin-bottom: 1.1rem; padding-bottom: 0.7rem; border-bottom: 1px solid var(--border); }
+        .tool-item { padding: 0.8rem 0; border-bottom: 1px solid var(--border); }
+        .tool-item:last-child { border-bottom: none; padding-bottom: 0; }
+        .tool-name { font-size: 0.9rem; font-weight: 600; color: var(--charcoal); margin-bottom: 0.15rem; }
+        .tool-desc { font-size: 0.81rem; color: var(--muted); }
 
         /* ─── CONTACT ─── */
-        #contact {
-            background: var(--white);
-        }
-
-        .contact-layout {
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 3rem;
-            align-items: start;
-        }
-
-        .form-group {
-            margin-bottom: 1.2rem;
-        }
-
-        .form-label {
-            display: block;
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--mid);
-            margin-bottom: 0.4rem;
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
-        }
-
-        .form-input {
-            width: 100%;
-            padding: 0.75rem 1rem;
-            font-family: 'Source Sans 3', sans-serif;
-            font-size: 0.95rem;
-            color: var(--charcoal);
-            background: var(--cream);
-            border: 1px solid var(--border);
-            outline: none;
-            transition: border-color 0.2s;
-        }
-
-        .form-input:focus {
-            border-color: var(--accent);
-        }
-
-        textarea.form-input {
-            min-height: 120px;
-            resize: vertical;
-        }
-
-        .contact-info {
-            padding-top: 0.5rem;
-        }
-
-        .contact-info-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: var(--dark);
-            margin-bottom: 1.5rem;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 0.8rem;
-            padding: 0.9rem 0;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .contact-item:last-child {
-            border-bottom: none;
-        }
-
-        .contact-item-icon {
-            font-size: 1.1rem;
-            margin-top: 0.1rem;
-        }
-
-        .contact-item-label {
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: var(--light);
-            margin-bottom: 0.1rem;
-        }
-
-        .contact-item-val {
-            font-size: 0.93rem;
-            color: var(--charcoal);
-        }
-
-        .contact-item-val a {
-            color: var(--accent);
-            text-decoration: none;
-        }
-
-        .contact-item-val a:hover {
-            text-decoration: underline;
-        }
-
-        /* ─── BACK TO TOP ─── */
-        .back-to-top {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            width: 44px;
-            height: 44px;
-            background: var(--accent);
-            color: var(--white);
-            border: none;
-            font-size: 1.1rem;
-            cursor: pointer;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.3s;
-            z-index: 99;
-        }
-
-        .back-to-top.visible {
-            opacity: 1;
-            pointer-events: auto;
-        }
-
-        .back-to-top:hover {
-            background: #1e3d7a;
-        }
+        #contact { background: var(--white); }
+        .contact-layout { display: grid; grid-template-columns: 1.2fr 1fr; gap: 3rem; align-items: start; }
+        .form-group { margin-bottom: 1.1rem; }
+        .form-label { display: block; font-size: 0.82rem; font-weight: 600; color: var(--mid); margin-bottom: 0.35rem; letter-spacing: 0.04em; text-transform: uppercase; }
+        .form-input { width: 100%; padding: 0.7rem 0.9rem; font-family: 'Source Sans 3', sans-serif; font-size: 0.93rem; color: var(--charcoal); background: var(--cream); border: 1px solid var(--border); outline: none; transition: border-color 0.2s; }
+        .form-input:focus { border-color: var(--accent); }
+        textarea.form-input { min-height: 110px; resize: vertical; }
+        .contact-info-title { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--dark); margin-bottom: 1.3rem; }
+        .contact-item { display: flex; align-items: flex-start; gap: 0.8rem; padding: 0.8rem 0; border-bottom: 1px solid var(--border); }
+        .contact-item:last-child { border-bottom: none; }
+        .contact-item-icon { font-size: 1rem; margin-top: 0.1rem; }
+        .contact-item-label { font-size: 0.77rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--light); margin-bottom: 0.1rem; }
+        .contact-item-val { font-size: 0.9rem; color: var(--charcoal); }
+        .contact-item-val a { color: var(--accent); text-decoration: none; }
+        .contact-item-val a:hover { text-decoration: underline; }
 
         /* ─── FOOTER ─── */
-        footer {
-            background: var(--dark);
-            color: var(--light);
-            text-align: center;
-            padding: 1.8rem;
-            font-size: 0.85rem;
-        }
+        footer { background: var(--dark); color: var(--light); text-align: center; padding: 1.6rem; font-size: 0.83rem; }
+        footer strong { color: var(--white); }
 
-        footer strong {
-            color: var(--white);
-        }
+        /* ─── BACK TO TOP ─── */
+        .back-to-top { position: fixed; bottom: 2rem; right: 2rem; width: 42px; height: 42px; background: var(--accent); color: var(--white); border: none; font-size: 1.1rem; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity 0.3s; z-index: 99; }
+        .back-to-top.visible { opacity: 1; pointer-events: auto; }
+        .back-to-top:hover { background: #1e3d7a; }
 
-        /* ─── FADE IN ─── */
-        .fade {
-            opacity: 0;
-            transform: translateY(18px);
-            transition: opacity 0.55s ease, transform 0.55s ease;
-        }
-
-        .fade.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        /* ─── FADE ─── */
+        .fade { opacity: 0; transform: translateY(16px); transition: opacity 0.5s ease, transform 0.5s ease; }
+        .fade.visible { opacity: 1; transform: translateY(0); }
 
         /* ─── RESPONSIVE ─── */
-        @media (max-width: 900px) {
-            .certs-grid { grid-template-columns: repeat(2, 1fr); }
+        @media (max-width: 960px) {
+            .certs-grid { grid-template-columns: repeat(2,1fr); }
             .skills-grid { grid-template-columns: 1fr; }
             .projects-grid { grid-template-columns: 1fr; }
             .about-grid { grid-template-columns: 1fr; }
             .veille-layout { grid-template-columns: 1fr; }
             .contact-layout { grid-template-columns: 1fr; }
+            .epreuves-grid { grid-template-columns: 1fr; }
         }
-
         @media (max-width: 640px) {
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 64px;
-                left: 0;
-                width: 100%;
-                background: var(--white);
-                border-top: 1px solid var(--border);
-                padding: 0.5rem 0;
-            }
-
+            .nav-links { display: none; flex-direction: column; position: absolute; top: 64px; left: 0; width: 100%; background: var(--white); border-top: 1px solid var(--border); padding: 0.5rem 0; }
             .nav-links.open { display: flex; }
-            .nav-links a { padding: 0.7rem 1.5rem; }
+            .nav-links a { padding: 0.65rem 1.5rem; }
             .hamburger { display: flex; }
-
             .hero-inner { grid-template-columns: 1fr; text-align: center; }
             .hero-avatar { margin: 0 auto; }
             .hero-actions { justify-content: center; }
-            .hero-name { font-size: 2.6rem; }
-
+            .hero-name { font-size: 2.5rem; }
             .certs-grid { grid-template-columns: 1fr; }
-            .section-title { font-size: 1.8rem; }
+            .section-title { font-size: 1.7rem; }
         }
     </style>
 </head>
 <body>
 
-    <!-- ─── NAVIGATION ─── -->
-    <nav>
-        <div class="nav-inner">
-            <a href="#accueil" class="nav-logo">René <span>SISR</span></a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#accueil" class="active">Accueil</a></li>
-                <li><a href="#apropos">À propos</a></li>
-                <li><a href="#competences">Compétences</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#projets">Projets</a></li>
-                <li><a href="#veille">Veille</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <button class="hamburger" id="hamburger" aria-label="Menu">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-    </nav>
+<!-- ─── NAVIGATION ─── -->
+<nav>
+    <div class="nav-inner">
+        <a href="#accueil" class="nav-logo">LOKO René <span>SISR</span></a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#accueil" class="active">Accueil</a></li>
+            <li><a href="#apropos">À propos</a></li>
+            <li><a href="#competences">Compétences</a></li>
+            <li><a href="#bts-competences">Référentiel</a></li>
+            <li><a href="#epreuves">E4 / E5</a></li>
+            <li><a href="#stages">Stages</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#projets">Projets</a></li>
+            <li><a href="#veille">Veille</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
 
-    <!-- ─── HERO ─── -->
-    <div id="accueil">
-        <div class="hero-inner">
-            <div>
-                <p class="hero-label">Portfolio professionnel</p>
-                <h1 class="hero-name">René</h1>
-                <p class="hero-role">Technicien SISR — Administrateur Systèmes &amp; Réseaux</p>
-                <p class="hero-desc">Étudiant en BTS SIO option SISR, spécialisé dans l'administration des infrastructures informatiques, la gestion des réseaux et la sécurité des systèmes d'information.</p>
-                <div class="hero-actions">
-                    <a href="#projets" class="btn btn-primary">Voir mes projets</a>
-                    <a href="#contact" class="btn btn-outline">Me contacter</a>
-                </div>
+<!-- ─── HERO ─── -->
+<div id="accueil">
+    <div class="hero-inner">
+        <div>
+            <p class="hero-label">Portfolio professionnel — BTS SIO SISR</p>
+            <h1 class="hero-name">LOKO René Gloire</h1>
+            <p class="hero-role">Technicien SISR — Administrateur Systèmes &amp; Réseaux</p>
+            <p class="hero-desc">Étudiant en BTS SIO option SISR, spécialisé dans l'administration des infrastructures informatiques, la gestion des réseaux et la sécurité des systèmes d'information.</p>
+            <div class="hero-actions">
+                <a href="#projets" class="btn btn-primary">Voir mes projets</a>
+                <a href="#contact" class="btn btn-outline">Me contacter</a>
+                <a href="cv-rene-loko.pdf" download class="btn btn-download">📄 Télécharger mon CV</a>
             </div>
-            <div class="hero-avatar">👨‍💻</div>
+        </div>
+        <div class="hero-avatar">👨‍💻</div>
+    </div>
+</div>
+
+<!-- ─── À PROPOS ─── -->
+<section id="apropos">
+    <div class="page-section">
+        <div class="section-header fade">
+            <p class="section-label">Qui suis-je</p>
+            <h2 class="section-title">À propos de moi</h2>
+            <div class="divider"></div>
+        </div>
+        <p class="fade" style="max-width:750px;color:var(--mid);font-size:1rem;line-height:1.8;margin-bottom:2.2rem;">
+            Passionné par les technologies de l'information, je me spécialise dans l'administration des systèmes et réseaux.
+            Mon parcours en BTS SIO option SISR me permet d'acquérir les compétences techniques nécessaires pour concevoir,
+            installer et maintenir des infrastructures informatiques robustes et sécurisées.
+        </p>
+        <div class="about-grid">
+            <div class="about-card fade">
+                <div class="about-card-icon">🎯</div>
+                <h3>Objectifs</h3>
+                <p>Devenir un expert en infrastructure IT et en cybersécurité, et contribuer à la transformation numérique des organisations.</p>
+            </div>
+            <div class="about-card fade">
+                <div class="about-card-icon">📚</div>
+                <h3>Formation</h3>
+                <p>BTS SIO SISR en cours. Formations certifiantes Cisco CCNA 200-301, Linux LPIC-1 et AWS en préparation.</p>
+            </div>
+            <div class="about-card fade">
+                <div class="about-card-icon">💡</div>
+                <h3>Expérience</h3>
+                <p>Stage de numérisation scolaire à Brazzaville et projet tutoré Wazuh (SIEM/XDR) à l'IRIS.</p>
+            </div>
         </div>
     </div>
+</section>
 
-    <!-- ─── À PROPOS ─── -->
-    <section id="apropos">
-        <div class="page-section">
-            <div class="section-header fade">
-                <p class="section-label">Qui suis-je</p>
-                <h2 class="section-title">À propos de moi</h2>
-                <div class="divider"></div>
+<!-- ─── COMPÉTENCES TECHNIQUES ─── -->
+<section id="competences">
+    <div class="page-section">
+        <div class="section-header fade">
+            <p class="section-label">Savoir-faire technique</p>
+            <h2 class="section-title">Compétences</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-card fade">
+                <div class="skill-top"><span class="skill-icon">🌐</span><span class="skill-name">Réseaux</span></div>
+                <div class="skill-bar-wrap">
+                    <div class="skill-bar-label"><span>Niveau</span><span>80 %</span></div>
+                    <div class="skill-bar"><div class="skill-bar-fill" data-width="80"></div></div>
+                </div>
+                <div class="tags"><span class="tag">Cisco</span><span class="tag">pfSense</span><span class="tag">VLAN</span><span class="tag">ACL</span><span class="tag">Routage</span><span class="tag">Wi-Fi</span></div>
             </div>
-
-            <p class="fade" style="max-width:750px; color:var(--mid); font-size:1.02rem; line-height:1.8; margin-bottom:2.5rem;">
-                Passionné par les technologies de l'information, je me spécialise dans l'administration des systèmes et réseaux.
-                Mon parcours en BTS SIO option SISR me permet d'acquérir les compétences techniques nécessaires pour concevoir,
-                installer et maintenir des infrastructures informatiques robustes et sécurisées.
-            </p>
-
-            <div class="about-grid">
-                <div class="about-card fade">
-                    <div class="about-card-icon">🎯</div>
-                    <h3>Objectifs</h3>
-                    <p>Devenir un expert en infrastructure IT et contribuer à la transformation numérique des entreprises.</p>
+            <div class="skill-card fade">
+                <div class="skill-top"><span class="skill-icon">🖥️</span><span class="skill-name">Systèmes</span></div>
+                <div class="skill-bar-wrap">
+                    <div class="skill-bar-label"><span>Niveau</span><span>78 %</span></div>
+                    <div class="skill-bar"><div class="skill-bar-fill" data-width="78"></div></div>
                 </div>
-                <div class="about-card fade">
-                    <div class="about-card-icon">📚</div>
-                    <h3>Formation</h3>
-                    <p>BTS SIO SISR en cours, formations certifiantes Cisco CCNA 200-301 et Linux LPIC-1 en préparation.</p>
+                <div class="tags"><span class="tag">Windows Server</span><span class="tag">Linux Debian</span><span class="tag">Active Directory</span><span class="tag">GPO</span><span class="tag">DNS/DHCP</span></div>
+            </div>
+            <div class="skill-card fade">
+                <div class="skill-top"><span class="skill-icon">🔒</span><span class="skill-name">Cybersécurité</span></div>
+                <div class="skill-bar-wrap">
+                    <div class="skill-bar-label"><span>Niveau</span><span>72 %</span></div>
+                    <div class="skill-bar"><div class="skill-bar-fill" data-width="72"></div></div>
                 </div>
-                <div class="about-card fade">
-                    <div class="about-card-icon">💡</div>
-                    <h3>Passion</h3>
-                    <p>Veille technologique active et expérimentation de nouvelles solutions d'infrastructure.</p>
+                <div class="tags"><span class="tag">Wazuh (SIEM)</span><span class="tag">Firewall</span><span class="tag">RADIUS</span><span class="tag">Kali Linux</span><span class="tag">Audit</span></div>
+            </div>
+            <div class="skill-card fade">
+                <div class="skill-top"><span class="skill-icon">☁️</span><span class="skill-name">Virtualisation &amp; Supervision</span></div>
+                <div class="skill-bar-wrap">
+                    <div class="skill-bar-label"><span>Niveau</span><span>70 %</span></div>
+                    <div class="skill-bar"><div class="skill-bar-fill" data-width="70"></div></div>
                 </div>
+                <div class="tags"><span class="tag">VMware</span><span class="tag">Proxmox</span><span class="tag">Nagios</span><span class="tag">GLPI</span><span class="tag">OCS Inventory</span></div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- ─── COMPÉTENCES ─── -->
-    <section id="competences">
-        <div class="page-section">
-            <div class="section-header fade">
-                <p class="section-label">Savoir-faire technique</p>
-                <h2 class="section-title">Compétences</h2>
-                <div class="divider"></div>
-            </div>
-
-            <div class="skills-grid">
-                <div class="skill-card fade">
-                    <div class="skill-top">
-                        <span class="skill-icon">🌐</span>
-                        <span class="skill-name">Réseaux</span>
-                    </div>
-                    <div class="skill-bar-wrap">
-                        <div class="skill-bar-label"><span>Niveau</span><span>85 %</span></div>
-                        <div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div>
-                    </div>
-                    <div class="tags">
-                        <span class="tag">Cisco</span>
-                        <span class="tag">pfSense</span>
-                        <span class="tag">VLAN</span>
-                        <span class="tag">Routage</span>
-                    </div>
-                </div>
-
-                <div class="skill-card fade">
-                    <div class="skill-top">
-                        <span class="skill-icon">🖥️</span>
-                        <span class="skill-name">Systèmes</span>
-                    </div>
-                    <div class="skill-bar-wrap">
-                        <div class="skill-bar-label"><span>Niveau</span><span>80 %</span></div>
-                        <div class="skill-bar"><div class="skill-bar-fill" data-width="80"></div></div>
-                    </div>
-                    <div class="tags">
-                        <span class="tag">Windows Server</span>
-                        <span class="tag">Linux</span>
-                        <span class="tag">Active Directory</span>
-                    </div>
-                </div>
-
-                <div class="skill-card fade">
-                    <div class="skill-top">
-                        <span class="skill-icon">☁️</span>
-                        <span class="skill-name">Virtualisation</span>
-                    </div>
-                    <div class="skill-bar-wrap">
-                        <div class="skill-bar-label"><span>Niveau</span><span>75 %</span></div>
-                        <div class="skill-bar"><div class="skill-bar-fill" data-width="75"></div></div>
-                    </div>
-                    <div class="tags">
-                        <span class="tag">VMware</span>
-                        <span class="tag">Proxmox</span>
-                        <span class="tag">Docker</span>
-                        <span class="tag">Hyper-V</span>
-                    </div>
-                </div>
-
-                <div class="skill-card fade">
-                    <div class="skill-top">
-                        <span class="skill-icon">🔒</span>
-                        <span class="skill-name">Sécurité</span>
-                    </div>
-                    <div class="skill-bar-wrap">
-                        <div class="skill-bar-label"><span>Niveau</span><span>70 %</span></div>
-                        <div class="skill-bar"><div class="skill-bar-fill" data-width="70"></div></div>
-                    </div>
-                    <div class="tags">
-                        <span class="tag">Firewall</span>
-                        <span class="tag">Monitoring</span>
-                        <span class="tag">Backup</span>
-                        <span class="tag">Audit</span>
-                    </div>
-                </div>
-            </div>
+<!-- ─── TABLEAU RÉFÉRENTIEL BTS ─── -->
+<section id="bts-competences">
+    <div class="page-section">
+        <div class="section-header fade">
+            <p class="section-label">Référentiel BTS SIO SISR</p>
+            <h2 class="section-title">Tableau de synthèse des compétences</h2>
+            <div class="divider"></div>
         </div>
-    </section>
-
-    <!-- ─── CERTIFICATIONS ─── -->
-    <section id="certifications">
-        <div class="page-section">
-            <div class="section-header fade">
-                <p class="section-label">Parcours certifiant</p>
-                <h2 class="section-title">Certifications</h2>
-                <div class="divider"></div>
-            </div>
-
-            <div class="cert-filters fade">
-                <button class="filter-btn active" data-filter="all">Toutes</button>
-                <button class="filter-btn" data-filter="obtenue">Obtenues</button>
-                <button class="filter-btn" data-filter="en_cours">En cours</button>
-                <button class="filter-btn" data-filter="prevue">Prévues</button>
-            </div>
-
-            <div class="certs-grid" id="certsGrid">
-
-                <!-- BTS SIO SISR -->
-                <div class="cert-card fade" data-status="obtenue">
-                    <div class="cert-top">
-                        <span class="cert-icon">🎓</span>
-                        <span class="cert-status-badge status-obtenue">✓ Obtenue</span>
-                    </div>
-                    <div class="cert-name">BTS SIO SISR</div>
-                    <div class="cert-org">Ministère de l'Éducation nationale</div>
-                    <div class="cert-date">Juin 2025</div>
-                    <button class="cert-details-toggle" onclick="toggleDetails(this)">Voir les détails ▾</button>
-                    <div class="cert-details-panel">
-                        <div class="cert-detail-row"><span class="cert-detail-key">Organisme</span><span class="cert-detail-val">Ministère de l'Éducation</span></div>
-                        <div class="cert-detail-row"><span class="cert-detail-key">Référence</span><span class="cert-detail-val">BTS-2025-SISR</span></div>
-                        <div class="cert-detail-row"><span class="cert-detail-key">Date</span><span class="cert-detail-val">Juin 2025</span></div>
-                        <a href="#" class="cert-link">Voir le certificat →</a>
-                    </div>
-                </div>
-
-                <!-- CompTIA A+ -->
-                <div class="cert-card fade" data-status="obtenue">
-                    <div class="cert-top">
-                        <span class="cert-icon">💻</span>
-                        <span class="cert-status-badge status-obtenue">✓ Obtenue</span>
-                    </div>
-                    <div class="cert-name">CompTIA A+</div>
-                    <div class="cert-org">CompTIA</div>
-                    <div class="cert-date">Novembre 2026</div>
-                    <button class="cert-details-toggle" onclick="toggleDetails(this)">Voir les détails ▾</button>
-                    <div class="cert-details-panel">
-                        <div class="cert-detail-row"><span class="cert-detail-key">Organisme</span><span class="cert-detail-val">CompTIA</span></div>
-                        <div class="cert-detail-row"><span class="cert-detail-key">Référence</span><span class="cert-detail-val">A+-XXXX-YYYY</span></div>
-                        <div class="cert-detail-row"><span class="cert-detail-key">Obtention</span><span class="cert-detail-val">Nov. 2026</span></div>
-                        <div class="cert-detail-row"><span class="cert-detail-key">Expiration</span><span class="cert-detail-val">Nov. 2027</span></div>
-                        <a href="#" class="cert-link">Voir le badge →</a>
-                    </div>
-                </div>
-
-                <!-- Linux LPIC-1 -->
-                <div class="cert-card fade" data-status="obtenue">
-                    <div class="cert-top">
-                        <span class="cert-icon">🐧</span>
-                        <span class="cert-status-badge status-obtenue">✓ Obtenue</span>
-                    </div>
-                    <div class="cert-name">Linux LPIC-1</div>
-                    <div class="cert-org">Linux Professional Institute</div>
-                    <div class="cert-date">Septembre 2026</div>
-                    <button class="cert-details-toggle" onclick="toggleDetails(this)">Voir les détails ▾</button>
-                    <div class="cert-details-panel">
-                        <div class="cert-detail-row"><span class="cert-detail-key">Organisme</span><span class="cert-detail-val">Linux Foundation</span></div>
-                        <div class="cert-detail-row"><span class="cert-detail-key">Référence</span><span class="cert-detail-val">LPI-XXXX</span></div>
-                        <div class="cert-detail-row"><span class="cert-detail-key">Obtention</span><span class="cert-detail-val">Sept. 2026</span></div>
-                        <div class="cert-detail-row"><span class="cert-detail-key">Expiration</span><span class="cert-detail-val">Sept. 2027</span></div>
-                        <a href="#" class="cert-link">Voir le badge →</a>
-                    </div>
-                </div>
-
-                <!-- Cisco CCNA Cybersecurity -->
-                <div class="cert-card fade" data-status="en_cours">
-                    <div class="cert-top">
-                        <span class="cert-icon">🌐</span>
-                        <span class="cert-status-badge status-en_cours">⏳ En cours</span>
-                    </div>
-                    <div class="cert-name">Cisco CCNA Cybersecurity</div>
-                    <div class="cert-org">Cisco Networking Academy</div>
-                    <div class="cert-date">Prévue : décembre 2025</div>
-                    <div class="cert-progress-wrap">
-                        <div class="cert-progress-labels"><span>Progression</span><span>65 %</span></div>
-                        <div class="cert-progress-bar"><div class="cert-progress-fill" data-progress="65"></div></div>
-                    </div>
-                    <button class="cert-details-toggle" onclick="toggleDetails(this)">Voir les détails ▾</button>
-                    <div class="cert-details-panel">
-                        <div class="cert-detail-row"><span class="cert-detail-key">Organisme</span><span class="cert-detail-val">Cisco Academy</span></div>
-                        <div class="cert-detail-row"><span class="cert-detail-key">Avancement</span><span class="cert-detail-val">65 %</span></div>
-                        <div class="cert-detail-row"><span class="cert-detail-key">Date prévue</span><span class="cert-detail-val">Déc. 2025</span></div>
-                        <a href="#" class="cert-link">Ressources de formation →</a>
-                    </div>
-                </div>
-
-                <!-- CompTIA Security+ -->
-                <div class="cert-card fade" data-status="en_cours">
-                    <div class="cert-top">
-                        <span class="cert-icon">🔒</span>
-                        <span class="cert-status-badge status-en_cours">⏳ En cours</span>
-                    </div>
-                    <div class="cert-name">CompTIA Security+</div>
-                    <div class="cert-org">CompTIA</div>
-                    <div class="cert-date">Prévue : juin 2026</div>
-                    <div class="cert-progress-wrap">
-                        <div class="cert-progress-labels"><span>Progression</span><span>45 %</span></div>
-                        <div class="cert-progress-bar"><div class="cert-progress-fill" data-progress="45"></div></div>
-                    </div>
-                    <button class="cert-details-toggle" onclick="toggleDetails(this)">Voir les détails ▾</button>
-                    <div class="cert-details-panel">
-                        <div class="cert-detail-row"><span class="cert-detail-key">Organisme</span><span class="cert-detail-val">CompTIA</span></div>
-                        <div class="cert-detail-row"><span class="cert-detail-key">Avancement</span><span class="cert-detail-val">45 %</span></div>
-                        <div class="cert-detail-row"><span class="cert-detail-key">Date prévue</span><span class="cert-detail-val">Jan. 2026</span></div>
-                        <a href="#" class="cert-link">Ressources de formation →</a>
-                    </div>
-                </div>
-
-                <!-- VMware -->
-                <div class="cert-card fade" data-status="en_cours">
-                    <div class="cert-top">
-                        <span class="cert-icon">☁️</span>
-                        <span class="cert-status-badge status-en_cours">⏳ En cours</span>
-                    </div>
-                    <div class="cert-name">VMware vSphere Associate</div>
-                    <div class="cert-org">VMware</div>
-                    <div class="cert-date">Prévue : juin 2026</div>
-                    <div class="cert-progress-wrap">
-                        <div class="cert-progress-labels"><span>Progression</span><span>30 %</span></div>
-                        <div class="cert-progress-bar"><div class="cert-progress-fill" data-progress="30"></div></div>
-                    </div>
-                    <button class="cert-details-toggle" onclick="toggleDetails(this)">Voir les détails ▾</button>
-                    <div class="cert-details-panel">
-                        <div class="cert-detail-row"><span class="cert-detail-key">Organisme</span><span class="cert-detail-val">VMware</span></div>
-                        <div class="cert-detail-row"><span class="cert-detail-key">Avancement</span><span class="cert-detail-val">30 %</span></div>
-                        <div class="cert-detail-row"><span class="cert-detail-key">Date prévue</span><span class="cert-detail-val">Fév. 2026</span></div>
-                    </div>
-                </div>
-
-                <!-- Cisco CCNA Enterprise -->
-                <div class="cert-card fade" data-status="prevue">
-                    <div class="cert-top">
-                        <span class="cert-icon">🔧</span>
-                        <span class="cert-status-badge status-prevue">📋 Prévue</span>
-                    </div>
-                    <div class="cert-name">Cisco CCNA Enterprise Infrastructure</div>
-                    <div class="cert-org">Cisco Networking Academy</div>
-                    <div class="cert-date">Prévue : juin 2026</div>
-                    <button class="cert-details-toggle" onclick="toggleDetails(this)">Voir les détails ▾</button>
-                    <div class="cert-details-panel">
-                        <div class="cert-detail-row"><span class="cert-detail-key">Organisme</span><span class="cert-detail-val">Cisco Academy</span></div>
-                        <div class="cert-detail-row"><span class="cert-detail-key">Date prévue</span><span class="cert-detail-val">Juin 2026</span></div>
-                    </div>
-                </div>
-
-                <!-- AWS -->
-                <div class="cert-card fade" data-status="prevue">
-                    <div class="cert-top">
-                        <span class="cert-icon">☁️</span>
-                        <span class="cert-status-badge status-prevue">📋 Prévue</span>
-                    </div>
-                    <div class="cert-name">AWS Solutions Architect Associate</div>
-                    <div class="cert-org">Amazon Web Services</div>
-                    <div class="cert-date">Prévue : Septembre 2026</div>
-                    <button class="cert-details-toggle" onclick="toggleDetails(this)">Voir les détails ▾</button>
-                    <div class="cert-details-panel">
-                        <div class="cert-detail-row"><span class="cert-detail-key">Organisme</span><span class="cert-detail-val">Amazon Web Services</span></div>
-                        <div class="cert-detail-row"><span class="cert-detail-key">Date prévue</span><span class="cert-detail-val">Avril 2026</span></div>
-                    </div>
-                </div>
-
-                <!-- CEH -->
-                <div class="cert-card fade" data-status="prevue">
-                    <div class="cert-top">
-                        <span class="cert-icon">🛡️</span>
-                        <span class="cert-status-badge status-prevue">📋 Prévue</span>
-                    </div>
-                    <div class="cert-name">CEH — Certified Ethical Hacker</div>
-                    <div class="cert-org">EC-Council</div>
-                    <div class="cert-date">Prévue : septembre 2026</div>
-                    <button class="cert-details-toggle" onclick="toggleDetails(this)">Voir les détails ▾</button>
-                    <div class="cert-details-panel">
-                        <div class="cert-detail-row"><span class="cert-detail-key">Organisme</span><span class="cert-detail-val">EC-Council</span></div>
-                        <div class="cert-detail-row"><span class="cert-detail-key">Date prévue</span><span class="cert-detail-val">Sept. 2026</span></div>
-                    </div>
-                </div>
-
-            </div>
+        <div class="table-wrapper fade">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Compétence</th>
+                        <th>Activité réalisée</th>
+                        <th>Contexte</th>
+                        <th>Preuve</th>
+                        <th>Niveau</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>B1</strong> – Support &amp; mise à disposition</td>
+                        <td>Installation postes + réseau Wi-Fi fournisseurs</td>
+                        <td>Projet E4 – Logistique</td>
+                        <td>Capture config VLAN</td>
+                        <td><span class="niveau-badge niveau-avance">Avancé</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>B1</strong> – Gestion des incidents</td>
+                        <td>Gestion tickets via GLPI</td>
+                        <td>Projet E4 – Logistique</td>
+                        <td>Tickets + procédures</td>
+                        <td><span class="niveau-badge niveau-intermediaire">Intermédiaire</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>B2</strong> – Administration réseaux</td>
+                        <td>Mise en place VLAN + routage pfSense</td>
+                        <td>Stadium Company</td>
+                        <td>Schéma réseau</td>
+                        <td><span class="niveau-badge niveau-avance">Avancé</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>B2</strong> – Administration systèmes</td>
+                        <td>Déploiement Active Directory + GPO</td>
+                        <td>Stadium Company / TP</td>
+                        <td>GPO + liste utilisateurs</td>
+                        <td><span class="niveau-badge niveau-avance">Avancé</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>B2</strong> – Services réseau</td>
+                        <td>Configuration DHCP / DNS / Zimbra</td>
+                        <td>Stadium Company</td>
+                        <td>Capture serveur</td>
+                        <td><span class="niveau-badge niveau-intermediaire">Intermédiaire</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>B2</strong> – Haute disponibilité</td>
+                        <td>Mise en place HAProxy (reverse proxy)</td>
+                        <td>Stadium Company</td>
+                        <td>Config HAProxy</td>
+                        <td><span class="niveau-badge niveau-intermediaire">Intermédiaire</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>B3</strong> – Cybersécurité</td>
+                        <td>Déploiement SIEM/XDR avec Wazuh</td>
+                        <td>Stage IRIS</td>
+                        <td>Dashboard + alertes</td>
+                        <td><span class="niveau-badge niveau-avance">Avancé</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>B3</strong> – Supervision</td>
+                        <td>Monitoring réseau avec Nagios</td>
+                        <td>Projet E4 – Logistique</td>
+                        <td>Capture supervision</td>
+                        <td><span class="niveau-badge niveau-intermediaire">Intermédiaire</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>B3</strong> – Sécurité des accès</td>
+                        <td>Mise en place RADIUS + ACL</td>
+                        <td>Stadium Company</td>
+                        <td>Config sécurité</td>
+                        <td><span class="niveau-badge niveau-intermediaire">Intermédiaire</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>B3</strong> – Tests d'intrusion</td>
+                        <td>Simulation d'attaques avec Kali Linux</td>
+                        <td>Stage IRIS</td>
+                        <td>Rapport de tests</td>
+                        <td><span class="niveau-badge niveau-debutant">Débutant</span></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- ─── PROJETS ─── -->
-    <section id="projets">
-        <div class="page-section">
-            <div class="section-header fade">
-                <p class="section-label">Réalisations</p>
-                <h2 class="section-title">Projets</h2>
-                <div class="divider"></div>
-            </div>
-
-            <div class="projects-grid">
-                <div class="project-card fade">
-                    <div class="project-icon">🌐</div>
-                    <h3 class="project-title">Configuration Réseau VLAN</h3>
-                    <p class="project-desc">Mise en place d'une architecture réseau segmentée avec VLANs pour améliorer la sécurité et les performances.</p>
-                    <div class="tags" style="margin-bottom:1.2rem;">
-                        <span class="tag">Cisco</span><span class="tag">Packet Tracer</span><span class="tag">VLAN</span><span class="tag">Routage</span>
-                    </div>
-                    <a href="#" class="btn btn-outline" style="font-size:0.85rem; padding:0.55rem 1.3rem;">Voir sur GitHub</a>
-                </div>
-
-                <div class="project-card fade">
-                    <div class="project-icon">🖥️</div>
-                    <h3 class="project-title">Serveur Active Directory</h3>
-                    <p class="project-desc">Déploiement et configuration d'un domaine Windows Server avec gestion des utilisateurs et stratégies de groupe.</p>
-                    <div class="tags" style="margin-bottom:1.2rem;">
-                        <span class="tag">Windows Server</span><span class="tag">Active Directory</span><span class="tag">GPO</span><span class="tag">DNS</span>
-                    </div>
-                    <a href="#" class="btn btn-outline" style="font-size:0.85rem; padding:0.55rem 1.3rem;">Voir sur GitHub</a>
-                </div>
-
-                <div class="project-card fade">
-                    <div class="project-icon">☁️</div>
-                    <h3 class="project-title">Infrastructure Virtualisée</h3>
-                    <p class="project-desc">Architecture virtualisée avec Proxmox et déploiement de conteneurs Docker pour optimiser les ressources.</p>
-                    <div class="tags" style="margin-bottom:1.2rem;">
-                        <span class="tag">Proxmox</span><span class="tag">Docker</span><span class="tag">Linux</span><span class="tag">Backup</span>
-                    </div>
-                    <a href="#" class="btn btn-outline" style="font-size:0.85rem; padding:0.55rem 1.3rem;">Voir sur GitHub</a>
-                </div>
-
-                <div class="project-card fade">
-                    <div class="project-icon">📊</div>
-                    <h3 class="project-title">Supervision Zabbix</h3>
-                    <p class="project-desc">Mise en place d'une solution de supervision réseau complète avec alertes automatisées et tableaux de bord.</p>
-                    <div class="tags" style="margin-bottom:1.2rem;">
-                        <span class="tag">Zabbix</span><span class="tag">SNMP</span><span class="tag">MySQL</span><span class="tag">PHP</span>
-                    </div>
-                    <a href="#" class="btn btn-outline" style="font-size:0.85rem; padding:0.55rem 1.3rem;">Voir sur GitHub</a>
-                </div>
-            </div>
+<!-- ─── ÉPREUVES E4 / E5 ─── -->
+<section id="epreuves">
+    <div class="page-section">
+        <div class="section-header fade">
+            <p class="section-label">BTS SIO — Épreuves professionnelles</p>
+            <h2 class="section-title">Situations professionnelles E4 &amp; E5</h2>
+            <div class="divider"></div>
         </div>
-    </section>
+        <div class="epreuves-grid">
 
-    <!-- ─── VEILLE ─── -->
-    <section id="veille">
-        <div class="page-section">
-            <div class="section-header fade">
-                <p class="section-label">Actualités du secteur</p>
-                <h2 class="section-title">Veille Technologique</h2>
-                <div class="divider"></div>
+            <!-- E4 -->
+            <div class="epreuve-card fade">
+                <span class="epreuve-badge">Épreuve E4</span>
+                <h3 class="epreuve-title">Fournisseurs &amp; Logistique – Réseau sécurisé et gestion du quai</h3>
+                <p class="epreuve-subtitle">📌 Mise en place d'une zone logistique isolée</p>
+                <ul class="mission-list">
+                    <li>Déploiement d'un réseau Wi-Fi dédié aux fournisseurs sur les quais de livraison, isolé du réseau interne via un VLAN spécifique.</li>
+                    <li>Configuration de comptes Active Directory avec restrictions horaires pour sécuriser les accès.</li>
+                    <li>Application de stratégies GPO pour automatiser l'accès à un dossier partagé et limiter les actions des utilisateurs.</li>
+                    <li>Mise en place de règles ACL pour empêcher toute communication avec les autres segments réseau.</li>
+                </ul>
+                <p class="epreuve-subtitle">📌 Suivi et supervision des équipements logistiques</p>
+                <ul class="mission-list">
+                    <li>Automatisation de l'inventaire des terminaux mobiles (douchettes Wi-Fi) via OCS Inventory et centralisation dans GLPI.</li>
+                    <li>Supervision de l'infrastructure Wi-Fi avec Nagios pour assurer la disponibilité du service.</li>
+                    <li>Organisation des livraisons grâce à un agenda partagé sur Zimbra.</li>
+                    <li>Gestion des incidents matériels via un système de ticketing.</li>
+                </ul>
+                <div class="tags" style="margin-bottom:1.2rem;">
+                    <span class="tag">VLAN</span><span class="tag">ACL</span><span class="tag">Active Directory</span>
+                    <span class="tag">GPO</span><span class="tag">Nagios</span><span class="tag">GLPI</span><span class="tag">OCS</span><span class="tag">Zimbra</span>
+                </div>
+                <div class="epreuve-download">
+                    <a href="e4-fiche-situation.pdf" download class="btn btn-download btn-sm">📥 Télécharger la fiche E4 (PDF)</a>
+                </div>
             </div>
 
-            <div class="veille-layout">
-                <div class="articles-list">
-                    <div class="article-card fade">
-                        <div class="article-meta">15 octobre 2025 — IT News</div>
-                        <h3 class="article-title">Évolution du Wi-Fi 7</h3>
-                        <p class="article-excerpt">Les nouvelles fonctionnalités du standard Wi-Fi 7 et leur impact sur les infrastructures réseau d'entreprise.</p>
+            <!-- E5 -->
+            <div class="epreuve-card fade">
+                <span class="epreuve-badge">Épreuve E5</span>
+                <h3 class="epreuve-title">Stadium Company – Infrastructure IT complète</h3>
+                <p class="epreuve-subtitle">📌 Restructuration de l'infrastructure réseau</p>
+                <ul class="mission-list">
+                    <li>Configuration réseau complète : VLAN, routage inter-VLAN, commutateurs, Wi-Fi d'entreprise.</li>
+                    <li>Mise en place de pfSense comme pare-feu principal avec NAT et règles de filtrage.</li>
+                    <li>Déploiement des services Active Directory, DHCP, DNS sur Windows Server.</li>
+                    <li>Messagerie collaborative avec Zimbra et agenda partagé.</li>
+                    <li>Supervision globale avec Nagios et gestion de parc avec GLPI.</li>
+                    <li>Haute disponibilité et équilibrage de charge avec HAProxy.</li>
+                    <li>Authentification sécurisée des accès Wi-Fi via serveur RADIUS.</li>
+                    <li>Virtualisation de l'ensemble de l'infrastructure sous VMware.</li>
+                </ul>
+                <div class="tags" style="margin-bottom:1.2rem;">
+                    <span class="tag">pfSense</span><span class="tag">VLAN</span><span class="tag">Windows Server</span>
+                    <span class="tag">Active Directory</span><span class="tag">Zimbra</span><span class="tag">Nagios</span>
+                    <span class="tag">HAProxy</span><span class="tag">RADIUS</span><span class="tag">VMware</span>
+                </div>
+                <div class="epreuve-download">
+                    <a href="e5-fiche-situation.pdf" download class="btn btn-download btn-sm">📥 Télécharger la fiche E5 (PDF)</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ─── STAGES ─── -->
+<section id="stages">
+    <div class="page-section">
+        <div class="section-header fade">
+            <p class="section-label">Expériences professionnelles</p>
+            <h2 class="section-title">Stages en entreprise</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="stages-list">
+
+            <!-- Stage 1 -->
+            <div class="stage-card fade">
+                <div class="stage-header">
+                    <div>
+                        <div class="stage-meta">Juillet – Septembre 2025</div>
+                        <h3 class="stage-title">Numérisation d'un établissement scolaire</h3>
+                        <div class="stage-lieu">📍 École JAHAID — Brazzaville, Congo</div>
                     </div>
-                    <div class="article-card fade">
-                        <div class="article-meta">10 octobre 2025 — Cyber Security</div>
-                        <h3 class="article-title">Architecture Zero Trust</h3>
-                        <p class="article-excerpt">Principes et mise en œuvre du modèle Zero Trust pour renforcer la sécurité des systèmes d'information.</p>
+                    <a href="attestation-stage1.pdf" download class="btn btn-download btn-sm">📥 Attestation de stage</a>
+                </div>
+                <div class="stage-section-title">Missions réalisées</div>
+                <ul class="stage-missions">
+                    <li>Participation à la transformation numérique de l'école JAHAID.</li>
+                    <li>Conception et développement d'un site web vitrine pour améliorer la visibilité et la communication de l'établissement.</li>
+                </ul>
+                <div class="stage-section-title">Compétences développées</div>
+                <div class="tags" style="margin-top:0.3rem;">
+                    <span class="tag">Développement web</span><span class="tag">HTML / CSS</span>
+                    <span class="tag">Analyse des besoins</span><span class="tag">Gestion de projet</span><span class="tag">Digitalisation</span>
+                </div>
+            </div>
+
+            <!-- Stage 2 -->
+            <div class="stage-card fade">
+                <div class="stage-header">
+                    <div>
+                        <div class="stage-meta">2e année BTS — Projet tutoré</div>
+                        <h3 class="stage-title">Projet cybersécurité — Déploiement Wazuh (SIEM/XDR)</h3>
+                        <div class="stage-lieu">📍 IRIS — France</div>
                     </div>
-                    <div class="article-card fade">
-                        <div class="article-meta">5 octobre 2025 — DevOps Weekly</div>
-                        <h3 class="article-title">Sécurité des conteneurs</h3>
-                        <p class="article-excerpt">Bonnes pratiques de sécurité pour Docker et Kubernetes dans les environnements de production.</p>
-                    </div>
+                    <a href="attestation-stage2.pdf" download class="btn btn-download btn-sm">📥 Attestation de stage</a>
+                </div>
+                <div class="stage-section-title">Missions réalisées</div>
+                <ul class="stage-missions">
+                    <li>Déploiement d'une solution SIEM/XDR basée sur Wazuh pour superviser un système d'information et détecter des menaces de sécurité.</li>
+                    <li>Installation d'une infrastructure complète : serveur Wazuh, agents sur machines Windows/Linux, outils d'analyse.</li>
+                    <li>Simulation d'attaques avec Kali Linux pour tester la détection et évaluer la pertinence des alertes.</li>
+                    <li>Analyse des événements de sécurité, réduction des faux positifs et amélioration des règles de détection.</li>
+                </ul>
+                <div class="stage-section-title">Compétences développées</div>
+                <div class="tags" style="margin-top:0.3rem;">
+                    <span class="tag">Wazuh SIEM/XDR</span><span class="tag">Linux Debian/Ubuntu</span>
+                    <span class="tag">Kali Linux</span><span class="tag">Analyse de logs</span>
+                    <span class="tag">Détection d'intrusions</span><span class="tag">Tests d'intrusion</span>
+                    <span class="tag">Virtualisation</span><span class="tag">Rédaction de rapports</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ─── CERTIFICATIONS ─── -->
+<section id="certifications">
+    <div class="page-section">
+        <div class="section-header fade">
+            <p class="section-label">Parcours certifiant</p>
+            <h2 class="section-title">Certifications</h2>
+            <div class="divider"></div>
+        </div>
+
+        <div class="cert-filters fade">
+            <button class="filter-btn active" data-filter="all">Toutes</button>
+            <button class="filter-btn" data-filter="en_cours">En cours</button>
+            <button class="filter-btn" data-filter="prevue">Prévues</button>
+        </div>
+
+        <div class="certs-grid" id="certsGrid">
+
+            <!-- CCNA -->
+            <div class="cert-card fade" data-status="en_cours">
+                <div class="cert-top">
+                    <span class="cert-icon">🌐</span>
+                    <span class="cert-status-badge status-en_cours">⏳ En cours</span>
+                </div>
+                <div class="cert-name">Cisco CCNA 200-301</div>
+                <div class="cert-org">Cisco Networking Academy</div>
+                <div class="cert-date">Prévue : fin 2026</div>
+                <div class="cert-progress-wrap">
+                    <div class="cert-progress-labels"><span>Progression</span><span>55 %</span></div>
+                    <div class="cert-progress-bar"><div class="cert-progress-fill" data-progress="55"></div></div>
+                </div>
+                <button class="cert-details-toggle" onclick="toggleDetails(this)">Voir les détails ▾</button>
+                <div class="cert-details-panel">
+                    <div class="cert-detail-row"><span class="cert-detail-key">Organisme</span><span class="cert-detail-val">Cisco Academy</span></div>
+                    <div class="cert-detail-row"><span class="cert-detail-key">Domaine</span><span class="cert-detail-val">Réseaux entreprise</span></div>
+                    <div class="cert-detail-row"><span class="cert-detail-key">Avancement</span><span class="cert-detail-val">55 %</span></div>
+                </div>
+            </div>
+
+            <!-- LPIC Linux -->
+            <div class="cert-card fade" data-status="en_cours">
+                <div class="cert-top">
+                    <span class="cert-icon">🐧</span>
+                    <span class="cert-status-badge status-en_cours">⏳ En cours</span>
+                </div>
+                <div class="cert-name">Linux LPIC-1</div>
+                <div class="cert-org">Linux Professional Institute</div>
+                <div class="cert-date">Prévue : 2026</div>
+                <div class="cert-progress-wrap">
+                    <div class="cert-progress-labels"><span>Progression</span><span>40 %</span></div>
+                    <div class="cert-progress-bar"><div class="cert-progress-fill" data-progress="40"></div></div>
+                </div>
+                <button class="cert-details-toggle" onclick="toggleDetails(this)">Voir les détails ▾</button>
+                <div class="cert-details-panel">
+                    <div class="cert-detail-row"><span class="cert-detail-key">Organisme</span><span class="cert-detail-val">Linux Foundation</span></div>
+                    <div class="cert-detail-row"><span class="cert-detail-key">Domaine</span><span class="cert-detail-val">Administration Linux</span></div>
+                    <div class="cert-detail-row"><span class="cert-detail-key">Avancement</span><span class="cert-detail-val">40 %</span></div>
+                </div>
+            </div>
+
+            <!-- CompTIA Security+ -->
+            <div class="cert-card fade" data-status="en_cours">
+                <div class="cert-top">
+                    <span class="cert-icon">🔒</span>
+                    <span class="cert-status-badge status-en_cours">⏳ En cours</span>
+                </div>
+                <div class="cert-name">CompTIA Security+</div>
+                <div class="cert-org">CompTIA</div>
+                <div class="cert-date">Prévue : 2026</div>
+                <div class="cert-progress-wrap">
+                    <div class="cert-progress-labels"><span>Progression</span><span>30 %</span></div>
+                    <div class="cert-progress-bar"><div class="cert-progress-fill" data-progress="30"></div></div>
+                </div>
+                <button class="cert-details-toggle" onclick="toggleDetails(this)">Voir les détails ▾</button>
+                <div class="cert-details-panel">
+                    <div class="cert-detail-row"><span class="cert-detail-key">Organisme</span><span class="cert-detail-val">CompTIA</span></div>
+                    <div class="cert-detail-row"><span class="cert-detail-key">Domaine</span><span class="cert-detail-val">Cybersécurité</span></div>
+                    <div class="cert-detail-row"><span class="cert-detail-key">Avancement</span><span class="cert-detail-val">30 %</span></div>
+                </div>
+            </div>
+
+            <!-- AWS -->
+            <div class="cert-card fade" data-status="prevue">
+                <div class="cert-top">
+                    <span class="cert-icon">☁️</span>
+                    <span class="cert-status-badge status-prevue">📋 Prévue</span>
+                </div>
+                <div class="cert-name">AWS Solutions Architect Associate</div>
+                <div class="cert-org">Amazon Web Services</div>
+                <div class="cert-date">Prévue : 2027</div>
+                <button class="cert-details-toggle" onclick="toggleDetails(this)">Voir les détails ▾</button>
+                <div class="cert-details-panel">
+                    <div class="cert-detail-row"><span class="cert-detail-key">Organisme</span><span class="cert-detail-val">Amazon Web Services</span></div>
+                    <div class="cert-detail-row"><span class="cert-detail-key">Domaine</span><span class="cert-detail-val">Architecture cloud</span></div>
+                </div>
+            </div>
+
+            <!-- Microsoft Windows Server -->
+            <div class="cert-card fade" data-status="prevue">
+                <div class="cert-top">
+                    <span class="cert-icon">🪟</span>
+                    <span class="cert-status-badge status-prevue">📋 Prévue</span>
+                </div>
+                <div class="cert-name">Microsoft Certified: Windows Server Hybrid Administrator Associate</div>
+                <div class="cert-org">Microsoft</div>
+                <div class="cert-date">Prévue : 2027</div>
+                <button class="cert-details-toggle" onclick="toggleDetails(this)">Voir les détails ▾</button>
+                <div class="cert-details-panel">
+                    <div class="cert-detail-row"><span class="cert-detail-key">Organisme</span><span class="cert-detail-val">Microsoft</span></div>
+                    <div class="cert-detail-row"><span class="cert-detail-key">Domaine</span><span class="cert-detail-val">Administration Windows Server hybride</span></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ─── PROJETS ─── -->
+<section id="projets">
+    <div class="page-section">
+        <div class="section-header fade">
+            <p class="section-label">Réalisations techniques</p>
+            <h2 class="section-title">Projets</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="projects-grid">
+
+            <div class="project-card fade">
+                <span class="project-badge">Projet scolaire majeur</span>
+                <div class="project-icon">🏟️</div>
+                <h3 class="project-title">Stadium Company — Infrastructure IT complète</h3>
+                <p class="project-desc">Simulation d'une entreprise souhaitant restructurer son infrastructure. Mise en place de l'ensemble des services réseau, système et sécurité : VLAN, pfSense, Active Directory, Zimbra, Nagios, HAProxy, RADIUS, VMware.</p>
+                <div class="tags" style="margin-bottom:1.1rem;">
+                    <span class="tag">pfSense</span><span class="tag">VLAN</span><span class="tag">AD</span><span class="tag">Nagios</span><span class="tag">HAProxy</span><span class="tag">RADIUS</span><span class="tag">VMware</span>
+                </div>
+                <div class="project-actions">
+                    <a href="#" class="btn btn-outline btn-sm">Voir sur GitHub</a>
+                    <a href="doc-stadium.pdf" download class="btn btn-download btn-sm">📥 Documentation</a>
+                </div>
+            </div>
+
+            <div class="project-card fade">
+                <span class="project-badge">Stage IRIS</span>
+                <div class="project-icon">🛡️</div>
+                <h3 class="project-title">Déploiement SIEM/XDR — Wazuh</h3>
+                <p class="project-desc">Déploiement complet d'une solution de détection des menaces avec Wazuh. Installation du serveur, des agents, simulation d'attaques et analyse des alertes de sécurité.</p>
+                <div class="tags" style="margin-bottom:1.1rem;">
+                    <span class="tag">Wazuh</span><span class="tag">SIEM</span><span class="tag">Kali Linux</span><span class="tag">Debian</span><span class="tag">Logs</span>
+                </div>
+                <div class="project-actions">
+                    <a href="#" class="btn btn-outline btn-sm">Voir sur GitHub</a>
+                    <a href="rapport-wazuh.pdf" download class="btn btn-download btn-sm">📥 Rapport technique</a>
+                </div>
+            </div>
+
+            <div class="project-card fade">
+                <span class="project-badge">Projet E4</span>
+                <div class="project-icon">📦</div>
+                <h3 class="project-title">Réseau logistique sécurisé</h3>
+                <p class="project-desc">Mise en place d'une zone réseau isolée pour les fournisseurs avec VLAN dédié, comptes AD restreints, supervision Nagios et gestion de parc via OCS/GLPI.</p>
+                <div class="tags" style="margin-bottom:1.1rem;">
+                    <span class="tag">VLAN</span><span class="tag">ACL</span><span class="tag">GPO</span><span class="tag">OCS</span><span class="tag">GLPI</span><span class="tag">Nagios</span>
+                </div>
+                <div class="project-actions">
+                    <a href="#" class="btn btn-outline btn-sm">Voir sur GitHub</a>
+                </div>
+            </div>
+
+            <div class="project-card fade">
+                <span class="project-badge">Stage Brazzaville</span>
+                <div class="project-icon">🌍</div>
+                <h3 class="project-title">Site web vitrine — École JAHAID</h3>
+                <p class="project-desc">Conception et développement d'un site web vitrine pour améliorer la communication et la visibilité numérique de l'établissement scolaire JAHAID à Brazzaville.</p>
+                <div class="tags" style="margin-bottom:1.1rem;">
+                    <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Développement web</span><span class="tag">Gestion de projet</span>
+                </div>
+                <div class="project-actions">
+                    <a href="#" class="btn btn-outline btn-sm">Voir le site</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ─── VEILLE ─── -->
+<section id="veille">
+    <div class="page-section">
+        <div class="section-header fade">
+            <p class="section-label">Actualités du secteur IT</p>
+            <h2 class="section-title">Veille Technologique</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="veille-layout">
+            <div class="articles-list">
+
+                <div class="article-card fade">
+                    <div class="article-meta">Octobre 2025 — ZDNet / ANSSI</div>
+                    <h3 class="article-title">Montée des solutions XDR en entreprise</h3>
+                    <p class="article-excerpt">Les organisations adoptent massivement les plateformes XDR pour centraliser la détection des menaces et automatiser la réponse aux incidents de sécurité.</p>
+                    <p class="article-impact">→ Impact personnel : m'a aidé à comprendre l'intérêt de Wazuh dans mon projet de stage IRIS et à mieux structurer les règles de détection.</p>
                 </div>
 
-                <aside class="veille-sidebar fade">
-                    <h3 class="sidebar-title">Outils de veille</h3>
-                    <div class="tool-item">
-                        <div class="tool-name">Google Alerts</div>
-                        <div class="tool-desc">Alertes automatisées sur les mots-clés IT stratégiques</div>
-                    </div>
-                    <div class="tool-item">
-                        <div class="tool-name">Reddit IT</div>
-                        <div class="tool-desc">Communautés spécialisées en infrastructure et sécurité</div>
-                    </div>
-                    <div class="tool-item">
-                        <div class="tool-name">LinkedIn</div>
-                        <div class="tool-desc">Articles et analyses d'experts du secteur IT</div>
-                    </div>
-                </aside>
+                <div class="article-card fade">
+                    <div class="article-meta">Septembre 2025 — IT News</div>
+                    <h3 class="article-title">Architecture Zero Trust : principes et mise en œuvre</h3>
+                    <p class="article-excerpt">Le modèle Zero Trust s'impose comme la référence pour sécuriser les accès aux systèmes d'information, en remplaçant le principe de confiance implicite par une vérification systématique.</p>
+                    <p class="article-impact">→ Impact personnel : renforce ma compréhension des ACL et des règles de filtrage mises en place dans le projet E4.</p>
+                </div>
+
+                <div class="article-card fade">
+                    <div class="article-meta">Août 2025 — DevOps Weekly</div>
+                    <h3 class="article-title">Sécurité des conteneurs Docker et Kubernetes</h3>
+                    <p class="article-excerpt">Bonnes pratiques de sécurité pour les environnements conteneurisés en production : gestion des droits, isolation des namespaces et contrôle des images.</p>
+                    <p class="article-impact">→ Impact personnel : anticipe les compétences nécessaires pour la certification AWS et l'administration cloud.</p>
+                </div>
+
             </div>
+
+            <aside class="veille-sidebar fade">
+                <h3 class="sidebar-title">Thématiques suivies</h3>
+                <div class="tool-item">
+                    <div class="tool-name">Cybersécurité</div>
+                    <div class="tool-desc">SIEM, XDR, Zero Trust, détection d'intrusions</div>
+                </div>
+                <div class="tool-item">
+                    <div class="tool-name">Réseaux</div>
+                    <div class="tool-desc">VLAN, Wi-Fi 7, SD-WAN, protocoles Cisco</div>
+                </div>
+                <div class="tool-item">
+                    <div class="tool-name">Cloud &amp; Virtualisation</div>
+                    <div class="tool-desc">AWS, VMware, conteneurs Docker</div>
+                </div>
+
+                <h3 class="sidebar-title" style="margin-top:1.5rem;">Sources utilisées</h3>
+                <div class="tool-item">
+                    <div class="tool-name">ANSSI</div>
+                    <div class="tool-desc">Recommandations officielles en cybersécurité</div>
+                </div>
+                <div class="tool-item">
+                    <div class="tool-name">Google Alerts</div>
+                    <div class="tool-desc">Alertes sur mots-clés IT stratégiques</div>
+                </div>
+                <div class="tool-item">
+                    <div class="tool-name">ZDNet / LinkedIn</div>
+                    <div class="tool-desc">Actualités et analyses d'experts du secteur</div>
+                </div>
+            </aside>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- ─── CONTACT ─── -->
-    <section id="contact">
-        <div class="page-section">
-            <div class="section-header fade">
-                <p class="section-label">Prendre contact</p>
-                <h2 class="section-title">Contact</h2>
-                <div class="divider"></div>
-            </div>
+<!-- ─── CONTACT ─── -->
+<section id="contact">
+    <div class="page-section">
+        <div class="section-header fade">
+            <p class="section-label">Prendre contact</p>
+            <h2 class="section-title">Contact</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="contact-layout">
+            <form id="contactForm" class="fade">
+                <div class="form-group">
+                    <label class="form-label" for="c-name">Nom</label>
+                    <input type="text" id="c-name" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="c-email">Adresse e-mail</label>
+                    <input type="email" id="c-email" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="c-subject">Sujet</label>
+                    <input type="text" id="c-subject" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="c-message">Message</label>
+                    <textarea id="c-message" class="form-input" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" id="submitBtn">Envoyer le message</button>
+            </form>
 
-            <div class="contact-layout">
-                <form id="contactForm" class="fade">
-                    <div class="form-group">
-                        <label class="form-label" for="name">Nom</label>
-                        <input type="text" id="name" class="form-input" required>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label" for="email">Adresse e-mail</label>
-                        <input type="email" id="email" class="form-input" required>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label" for="subject">Sujet</label>
-                        <input type="text" id="subject" class="form-input" required>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label" for="message">Message</label>
-                        <textarea id="message" class="form-input" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary" id="submitBtn">Envoyer le message</button>
-                </form>
-
-                <div class="contact-info fade">
-                    <h3 class="contact-info-title">Coordonnées</h3>
-                    <div class="contact-item">
-                        <span class="contact-item-icon">📧</span>
-                        <div>
-                            <div class="contact-item-label">E-mail</div>
-                            <div class="contact-item-val"><a href="mailto:prince.bts.sisr@email.com">renegloireloko@gmail.com/lokorenegloire@gmail.com</a></div>
+            <div class="contact-info fade">
+                <h3 class="contact-info-title">Coordonnées</h3>
+                <div class="contact-item">
+                    <span class="contact-item-icon">📧</span>
+                    <div>
+                        <div class="contact-item-label">E-mail</div>
+                        <div class="contact-item-val">
+                            <a href="mailto:renegloireloko@gmail.com">renegloireloko@gmail.com</a><br>
+                            <a href="mailto:lokorenegloire@gmail.com">lokorenegloire@gmail.com</a>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <span class="contact-item-icon">📞</span>
-                        <div>
-                            <div class="contact-item-label">Téléphone</div>
-                            <div class="contact-item-val">+33 7 53 57 24 72</div>
-                        </div>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-item-icon">📞</span>
+                    <div>
+                        <div class="contact-item-label">Téléphone</div>
+                        <div class="contact-item-val">+33 7 53 57 24 72</div>
                     </div>
-                    <div class="contact-item">
-                        <span class="contact-item-icon">📍</span>
-                        <div>
-                            <div class="contact-item-label">Localisation</div>
-                            <div class="contact-item-val">France</div>
-                        </div>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-item-icon">📍</span>
+                    <div>
+                        <div class="contact-item-label">Localisation</div>
+                        <div class="contact-item-val">France</div>
                     </div>
-                    <div class="contact-item">
-                        <span class="contact-item-icon">💼</span>
-                        <div>
-                            <div class="contact-item-label">LinkedIn</div>
-                            <div class="contact-item-val"><a href="https://linkedin.com/in/prince-sisr" target="_blank">René Gloire LOKO</a></div>
-                        </div>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-item-icon">💼</span>
+                    <div>
+                        <div class="contact-item-label">LinkedIn</div>
+                        <div class="contact-item-val"><a href="https://linkedin.com/in/rene-gloire-loko" target="_blank">René Gloire LOKO</a></div>
                     </div>
-                    <div class="contact-item">
-                        <span class="contact-item-icon">🐙</span>
-                        <div>
-                            <div class="contact-item-label">GitHub</div>
-                            <div class="contact-item-val"><a href="https://github.com/prince-sisr" target="_blank">github.com/lrg-collab/</a></div>
-                        </div>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-item-icon">🐙</span>
+                    <div>
+                        <div class="contact-item-label">GitHub</div>
+                        <div class="contact-item-val"><a href="https://github.com/lrg-collab" target="_blank">github.com/lrg-collab</a></div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- ─── FOOTER ─── -->
-    <footer>
-        <p>© 2025 <strong>Prince</strong> — Portfolio BTS SIO SISR. Tous droits réservés.</p>
-    </footer>
+<!-- ─── FOOTER ─── -->
+<footer>
+    <p>© 2025 <strong>LOKO René Gloire</strong> — Portfolio BTS SIO SISR. Tous droits réservés.</p>
+</footer>
 
-    <!-- Back to top -->
-    <button class="back-to-top" id="backToTop" aria-label="Retour en haut">↑</button>
+<button class="back-to-top" id="backToTop" aria-label="Retour en haut">↑</button>
 
-    <script>
-        // ─── HAMBURGER ───
-        document.getElementById('hamburger').addEventListener('click', () => {
-            document.getElementById('navLinks').classList.toggle('open');
+<script>
+    // Hamburger
+    document.getElementById('hamburger').addEventListener('click', () => {
+        document.getElementById('navLinks').classList.toggle('open');
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', e => {
+            const target = document.querySelector(a.getAttribute('href'));
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                document.getElementById('navLinks').classList.remove('open');
+            }
         });
+    });
 
-        // ─── SMOOTH SCROLL ───
-        document.querySelectorAll('a[href^="#"]').forEach(a => {
-            a.addEventListener('click', e => {
-                const target = document.querySelector(a.getAttribute('href'));
-                if (target) {
-                    e.preventDefault();
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    document.getElementById('navLinks').classList.remove('open');
-                }
+    // Active nav
+    function updateNav() {
+        const sections = document.querySelectorAll('section[id], div[id]');
+        let current = '';
+        sections.forEach(s => { if (window.scrollY >= s.offsetTop - 120) current = s.id; });
+        document.querySelectorAll('.nav-links a').forEach(a => {
+            a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+        });
+    }
+
+    // Fade in + animations
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                e.target.classList.add('visible');
+                e.target.querySelectorAll('.skill-bar-fill').forEach(b => { b.style.width = b.dataset.width + '%'; });
+                e.target.querySelectorAll('.cert-progress-fill').forEach(b => { b.style.width = b.dataset.progress + '%'; });
+            }
+        });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.fade').forEach(el => observer.observe(el));
+
+    // Back to top
+    const btt = document.getElementById('backToTop');
+    btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    window.addEventListener('scroll', () => {
+        btt.classList.toggle('visible', window.scrollY > 400);
+        updateNav();
+    });
+
+    // Cert filters
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', function () {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            const filter = this.dataset.filter;
+            document.querySelectorAll('#certsGrid .cert-card').forEach(card => {
+                card.style.display = (filter === 'all' || card.dataset.status === filter) ? '' : 'none';
             });
         });
+    });
 
-        // ─── ACTIVE NAV ───
-        function updateNav() {
-            const sections = document.querySelectorAll('section[id], div[id]');
-            let current = '';
-            sections.forEach(s => {
-                if (window.scrollY >= s.offsetTop - 120) current = s.id;
-            });
-            document.querySelectorAll('.nav-links a').forEach(a => {
-                a.classList.toggle('active', a.getAttribute('href') === '#' + current);
-            });
-        }
+    // Cert details
+    function toggleDetails(btn) {
+        const panel = btn.nextElementSibling;
+        const isOpen = panel.classList.toggle('open');
+        btn.textContent = isOpen ? 'Masquer les détails ▴' : 'Voir les détails ▾';
+    }
 
-        // ─── FADE IN ───
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(e => {
-                if (e.isIntersecting) {
-                    e.target.classList.add('visible');
-                    // Animate skill bars
-                    e.target.querySelectorAll('.skill-bar-fill').forEach(bar => {
-                        bar.style.width = bar.dataset.width + '%';
-                    });
-                    // Animate cert progress bars
-                    e.target.querySelectorAll('.cert-progress-fill').forEach(bar => {
-                        bar.style.width = bar.dataset.progress + '%';
-                    });
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.fade').forEach(el => observer.observe(el));
-
-        // Animate skill bars already visible
-        document.querySelectorAll('.skill-bar-fill').forEach(bar => {
-            const rect = bar.getBoundingClientRect();
-            if (rect.top < window.innerHeight) bar.style.width = bar.dataset.width + '%';
-        });
-
-        // ─── BACK TO TOP ───
-        const btt = document.getElementById('backToTop');
-        btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-
-        window.addEventListener('scroll', () => {
-            btt.classList.toggle('visible', window.scrollY > 400);
-            updateNav();
-        });
-
-        // ─── CERT FILTERS ───
-        document.querySelectorAll('.filter-btn').forEach(btn => {
-            btn.addEventListener('click', function () {
-                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-                this.classList.add('active');
-                const filter = this.dataset.filter;
-                document.querySelectorAll('#certsGrid .cert-card').forEach(card => {
-                    const show = filter === 'all' || card.dataset.status === filter;
-                    card.style.display = show ? '' : 'none';
-                });
-            });
-        });
-
-        // ─── CERT DETAILS TOGGLE ───
-        function toggleDetails(btn) {
-            const panel = btn.nextElementSibling;
-            const isOpen = panel.classList.toggle('open');
-            btn.textContent = isOpen ? 'Masquer les détails ▴' : 'Voir les détails ▾';
-        }
-
-        // ─── CONTACT FORM ───
-        document.getElementById('contactForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-            const btn = document.getElementById('submitBtn');
-            btn.textContent = 'Envoi en cours…';
-            btn.disabled = true;
+    // Contact form
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        const btn = document.getElementById('submitBtn');
+        btn.textContent = 'Envoi en cours…';
+        btn.disabled = true;
+        setTimeout(() => {
+            btn.textContent = 'Message envoyé avec succès';
+            btn.style.background = 'var(--success)';
             setTimeout(() => {
-                btn.textContent = 'Message envoyé avec succès';
-                btn.style.background = 'var(--success)';
-                setTimeout(() => {
-                    btn.textContent = 'Envoyer le message';
-                    btn.style.background = '';
-                    btn.disabled = false;
-                    this.reset();
-                }, 2500);
-            }, 1000);
-        });
-    </script>
+                btn.textContent = 'Envoyer le message';
+                btn.style.background = '';
+                btn.disabled = false;
+                this.reset();
+            }, 2500);
+        }, 1000);
+    });
+</script>
 </body>
 </html>
-
