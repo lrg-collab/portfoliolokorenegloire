@@ -1043,26 +1043,102 @@ StadiumCompany .</div>
     </div>
     <div class="veille-layout">
       <div>
-        <div class="article-card reveal">
-          <div class="article-meta">Août 2025 — DevOps Weekly</div>
-          <div class="article-title">Sécurité des conteneurs Docker et Kubernetes</div>
-          <p class="article-excerpt">Bonnes pratiques de sécurité pour les environnements conteneurisés en production : gestion des droits, isolation des namespaces et contrôle des images.</p>
-          <p class="article-impact">→ Impact personnel : anticipe les compétences nécessaires pour la certification AWS et l'administration cloud.</p>
-        </div>
-        <div class="article-card reveal">
-          <div class="article-meta">Juin 2025 — ANSSI</div>
-          <div class="article-title">Recommandations Zero Trust pour les infrastructures hybrides</div>
-          <p class="article-excerpt">L'ANSSI publie un guide sur l'adoption du modèle Zero Trust dans les organisations, couvrant l'authentification forte, la microsegmentation et la supervision continue.</p>
-          <p class="article-impact">→ Impact personnel : renforce la compréhension des architectures de sécurité modernes, applicable aux projets SISR.</p>
-        </div>
-        <div class="article-card reveal">
-          <div class="article-meta">Mai 2025 — Cisco Blog</div>
-          <div class="article-title">Wi-Fi 7 en entreprise : performances et sécurité</div>
-          <p class="article-excerpt">Analyse des apports du Wi-Fi 7 (802.11be) pour les réseaux d'entreprise, avec focus sur la réduction de latence et les nouvelles exigences en matière de sécurité.</p>
-          <p class="article-impact">→ Impact personnel : prépare à l'évolution des infrastructures Wi-Fi d'entreprise, compétence clé SISR.</p>
-        </div>
-      </div>
-      <div>
+       <div class="article-card reveal">
+  <div class="article-meta">Août 2025 — DevOps Weekly</div>
+  <div class="article-title">Sécurité des conteneurs Docker et Kubernetes</div>
+  <p class="article-excerpt">Bonnes pratiques de sécurité pour les environnements conteneurisés en production : gestion des droits, isolation des namespaces et contrôle des images.</p>
+  <p class="article-impact">→ Impact personnel : anticipe les compétences nécessaires pour la certification AWS et l'administration cloud.</p>
+</div>
+
+<div class="article-card reveal">
+  <div class="article-meta">Juin 2025 — ANSSI</div>
+  <div class="article-title">Recommandations Zero Trust pour les infrastructures hybrides</div>
+  <p class="article-excerpt">L'ANSSI publie un guide sur l'adoption du modèle Zero Trust dans les organisations, couvrant l'authentification forte, la microsegmentation et la supervision continue.</p>
+  <p class="article-impact">→ Impact personnel : renforce la compréhension des architectures de sécurité modernes, applicable aux projets SISR.</p>
+</div>
+
+<!-- ========== DÉVELOPPEMENT ZERO TRUST ========== -->
+<div class="veille-section reveal">
+  <h3 class="section-title">Zero Trust (ANSSI)</h3>
+  <p class="section-intro">Le modèle Zero Trust repose sur un principe fondamental : <strong>ne jamais faire confiance par défaut</strong>, même à l'intérieur du réseau. Chaque accès doit être vérifié, limité et surveillé en continu.</p>
+  <div class="points-grid">
+    <div class="point-item">
+      <div class="point-label">🔑 Authentification forte</div>
+      <div class="point-desc">MFA obligatoire pour chaque accès</div>
+    </div>
+    <div class="point-item">
+      <div class="point-label">🔀 Micro-segmentation</div>
+      <div class="point-desc">Isoler les ressources du réseau</div>
+    </div>
+    <div class="point-item">
+      <div class="point-label">👁️ Supervision continue</div>
+      <div class="point-desc">Monitoring permanent des accès</div>
+    </div>
+    <div class="point-item">
+      <div class="point-label">🔒 Moindre privilège</div>
+      <div class="point-desc">Accès strictement nécessaires</div>
+    </div>
+  </div>
+  <div class="objectif-box">
+    <span class="objectif-label">Objectif :</span>
+    Sécuriser les infrastructures hybrides (cloud + local) en réduisant les risques d'attaque.
+  </div>
+</div>
+
+<!-- ========== DÉVELOPPEMENT CONTENEURS ========== -->
+<div class="veille-section reveal">
+  <h3 class="section-title">Sécurité des conteneurs (Docker &amp; Kubernetes)</h3>
+  <p class="section-intro">Docker et Kubernetes facilitent le déploiement mais introduisent des risques de sécurité spécifiques. Quatre bonnes pratiques essentielles :</p>
+  <div class="points-grid">
+    <div class="point-item">
+      <div class="point-label">🚫 Gestion des droits</div>
+      <div class="point-desc">Ne pas utiliser root dans les conteneurs</div>
+    </div>
+    <div class="point-item">
+      <div class="point-label">📦 Isolation</div>
+      <div class="point-desc">Séparer les environnements via les namespaces</div>
+    </div>
+    <div class="point-item">
+      <div class="point-label">🛡️ Contrôle des images</div>
+      <div class="point-desc">Scanner et utiliser des sources fiables</div>
+    </div>
+    <div class="point-item">
+      <div class="point-label">📊 Surveillance</div>
+      <div class="point-desc">Détecter les comportements suspects</div>
+    </div>
+  </div>
+  <div class="objectif-box">
+    <span class="objectif-label">Objectif :</span>
+    Éviter qu'un conteneur compromis ne compromette l'ensemble du système.
+  </div>
+</div>
+
+<!-- ========== CONCLUSION ========== -->
+<div class="conclusion-section reveal">
+  <h3 class="conclusion-title">Conclusion</h3>
+  <p class="conclusion-intro">
+    Ces deux veilles illustrent la même évolution de fond : la cybersécurité moderne repose sur le
+    <strong>contrôle strict des accès</strong>, <strong>l'isolation des systèmes</strong> et la
+    <strong>surveillance continue</strong>.
+  </p>
+  <div class="conclusion-pillars">
+    <div class="pillar">🔒 Contrôle strict des accès</div>
+    <div class="pillar">📦 Isolation des systèmes</div>
+    <div class="pillar">👁️ Surveillance continue</div>
+  </div>
+  <div class="conclusion-summary">
+    <div class="summary-item summary-zt">
+      <div class="summary-label">Zero Trust</div>
+      <div class="summary-value">Stratégie globale</div>
+      <div class="summary-detail">Cadre de sécurité pour toute l'infrastructure hybride</div>
+    </div>
+    <div class="summary-item summary-ct">
+      <div class="summary-label">Sécurité des conteneurs</div>
+      <div class="summary-value">Application concrète</div>
+      <div class="summary-detail">Mise en œuvre pratique dans les environnements cloud</div>
+    </div>
+  </div>
+</div>
         <div class="sidebar-card reveal">
           <h4>Thématiques suivies</h4>
           <div class="sidebar-item"><div class="sidebar-item-name">Cybersécurité</div><div class="sidebar-item-desc">SIEM, XDR, Zero Trust, détection d'intrusions</div></div>
@@ -1082,7 +1158,7 @@ StadiumCompany .</div>
 
 <!-- ── FOOTER ── -->
 <footer>
-  <p>© 2025 — <strong>LOKO René Gloire</strong> · Portfolio BTS SIO SISR · Tous droits réservés</p>
+  <p>© 2026 — <strong>LOKO René Gloire</strong> · Portfolio BTS SIO SISR · Tous droits réservés</p>
 </footer>
 
 <button class="back-to-top" id="btt" aria-label="Retour en haut">↑</button>
